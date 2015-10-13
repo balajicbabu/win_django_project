@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
     'registration',
     'store',
 )
@@ -65,6 +66,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect'
             ],
         },
     },
@@ -72,7 +75,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'win_django_project.wsgi.application'
 
-
+AUTHENTICATION_BACKENDS = (
+    'social.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend'
+)
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
@@ -115,3 +121,7 @@ EMAIL_HOST_PASSWORD = "Mirriad0924"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = "books@mysterybooks.com"
+
+# Social Auth - Facebook
+SOCIAL_AUTH_FACEBOOK_KEY = '1072375666108409'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'c71376ed1c2785f48955d1b06b478a28'
