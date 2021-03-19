@@ -7,7 +7,7 @@ beautifulsoup4==4.3.2
 behave==1.2.5
 distribute==0.6.49
 django-registration-redux==1.1
-djangorestframework==3.2.4
+djangorestframework==3.11.2
 elasticsearch==1.2.0
 enum34==1.0.4
 formic==0.9beta8
