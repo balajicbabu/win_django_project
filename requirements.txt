@@ -25,7 +25,7 @@ pyautoit==0.4
 pycairo==1.8.10
 pygooglechart==0.2.1
 pywinauto==0.4.2
-requests==2.2.1
+requests==2.20.0
 robotframework==2.9a1
 selenium==2.45.0
 six==1.9.0
